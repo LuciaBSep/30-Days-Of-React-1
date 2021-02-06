@@ -1,0 +1,122 @@
+*{
+    font-family: 'Montserrat';
+}
+
+.titulo{
+    text-align: center;
+    display: block;
+    margin:5px;
+    padding:10px;
+}
+
+ul{
+    display:table;
+    margin:auto;
+}
+
+.divisor{
+    width:96%;
+    height:20px;
+    margin:2%;
+    background: rgba(6, 107, 146, 0.699)
+}
+
+.listaNumeros ul{
+    list-style-type:none;
+    width:80%;
+    margin:auto;
+}
+
+.listaNumeros li{
+    float:left;
+    width:12%;
+    height: 100px;
+    margin:0.1%;
+    text-align: center;
+    color:white;
+    align-items: center;
+    display: table;
+}
+
+
+.numerosTabla{
+    display:table-cell;
+    vertical-align:middle;
+    font-size:150%;
+}
+
+
+.listaNumeros li:hover,
+.numerosTabla:hover{
+    border-radius:5px;
+    transform: scale(1.5);
+}
+
+
+.coloresHexa{
+    display:block;
+}
+
+.coloresHexa ul{
+    list-style-type:none;
+    width:80%;
+    margin:auto;
+}
+
+.coloresHexa li{
+    float:left;
+    width:12%;
+    height: 100px;
+    margin:0.1%;
+    text-align: center;
+    color:white;
+    align-items: center;
+    display: table;
+}
+
+
+.coloresHexa li:hover{
+    border-radius: 5px;
+    transform: scale(1.5);
+}
+
+
+.nombreColores{
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.tablaPaises{
+    text-align:center;
+}
+
+table{
+    margin:auto;
+    width:70%;
+}
+
+td{
+    text-transform: uppercase;
+}
+
+
+#progressBar{
+    width:20rem;
+    height: 2rem;
+    background-color: white;
+}
+
+#progressBarFull{
+    height:2rem;
+    background-color:orange;
+    width:0%;
+}
+
+ul Button{
+    text-align: center;
+    background: rgba(28, 153, 202, 0.651);
+    width:20%;
+    margin-left: 40%;
+    display:table-cell;
+    margin-top: 5px;
+}

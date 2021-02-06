@@ -1,0 +1,128 @@
+
+*{
+    font-family: 'Montserrat';
+}
+
+
+
+#logo{ 
+    width: 95%;
+    margin: 2.5%;
+}
+
+
+
+
+input{
+    border-radius: 5px;
+    border:0;
+    padding:10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width:90%;
+}
+
+input::selection{
+    background:darkcyan;
+    color:white;
+}
+
+input:focus{
+    background:lightblue;
+}
+
+
+.container{
+    width:100%;
+}
+
+.main,
+.header,
+.panel{
+    width:80%;
+    margin:auto;
+}
+
+
+table{
+    width:100%;
+    margin-bottom: 20px;
+}
+
+.main{
+    background: cadetblue;
+    text-align: center;
+    height: 300px;
+    padding:20px;
+    width: 70%;
+}
+
+
+.boton{
+    height: 100%;
+}
+
+
+button{
+    min-width: 50%;
+    min-height: 20%;
+    border-radius: 10px;
+    border:0;
+    background:chocolate;
+    color:white;
+}
+
+button:focus{
+    background:rgb(201, 67, 6);
+}
+
+button:hover{ 
+    background:rgb(201, 67, 6);
+}
+
+.perfil{
+    width: 30%;
+    margin-top: 5%;
+}
+
+
+#foto{
+    width:50%;
+    background:black;
+    border-radius:50%;
+}
+
+#foto:hover{
+    background:red;
+    transform: scale(1.3);
+    transform:rotate(45deg);
+    transition: 0.2s;
+}
+
+
+.list{
+    text-align:center;
+}
+
+li{
+   /* float:left;*/
+    display: inline-block;
+    margin:1%;
+    background:rgb(16, 216, 223);
+    padding:1%;
+    text-align: center;
+    border-radius:15%;
+    color:white;
+}
+
+
+li:hover{
+    background:rgb(0, 140, 255);
+    transform: scale(1.1);
+    transition:0.2s;
+}
+
+.tiempo{
+   margin-top: 5%;
+   display:block;
+}
