@@ -6,6 +6,9 @@ import {countriesData} from './data/countries.js'
 
 // Fuction to show month date year
 
+const body=document.body
+
+
 const showDate = (time) => {
   const months = [
     'January',
@@ -175,8 +178,6 @@ class Footer extends React.Component {
 
 console.log(countriesData[0])
 
-const banderas=()=>{}
-
 
 class Banderas extends React.Component {
   constructor(props) {
@@ -253,11 +254,12 @@ class App extends React.Component {
       if (this.state.styles.backgroundColor=='')
       {
         this.setState({styles:{backgroundColor:'#0B0E35',color:'white'}})
-
+        body.style.backgroundColor="#0B0E35"
       }
       else
       {
         this.setState({styles:{backgroundColor:'',color:''}})
+        body.style.backgroundColor=""
       }
   }
 

@@ -1,7 +1,9 @@
 
+
 .header-wrapper{
     background:deepskyblue;
     width:100%;
+    height:100%;
 }
 
 
@@ -26,6 +28,7 @@ body{
     width:100%;
     margin:0;
     background:deepskyblue;
+    height:100%;
 }
 
 
