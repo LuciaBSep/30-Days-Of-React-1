@@ -6,7 +6,8 @@ import ReactDOM from 'react-dom'
 const estacion = (date)=>
 {
     let est=""
-    let mes=date.getMonth()
+    //let mes=date.getMonth()
+    let mes=10
     let dia=date.getDay()
 
     if (dia>20)
@@ -148,11 +149,30 @@ class Header extends React.Component {
     }
 }
 
+const color=(est)=>
+{
+    let hexa=''
+    if (est==="verano")
+        hexa='#F84924'
+    if (est==="invierno")
+        hexa='#4FCEC3'
+    if (est==="primavera")
+        hexa='#A027C4'
+    if (est==="otoño")
+        hexa='#E9900F'
+
+    return hexa
+
+}
+
 
 class App extends React.Component {
+
     state = {
-        estacion:"",
+        styles:{backgroundColor:color(estacion(new Date()))},
     }
+
+
 
     render()
     {
@@ -162,12 +182,18 @@ class App extends React.Component {
             author: {firstName:"Lucia", lastName:"Sepulveda"},
         }
 
-        const date= new Date()
+        console.log(this.state.styles.backgroundColor)
+
+        const date=new Date()
+
+    //    if (this.state.estacion==="verano")
+     //       this.setState({style:{backgroundColor: '#F84924'}})
+        
 
         return(
-            <div className="App">
+            <div className="App" style={this.state.styles}>
                 <Header data={data} date={date}/>
-                <p>Hola</p>
+                <p>{estacion}</p>
             </div>
         )
     }
