@@ -54,75 +54,28 @@ const estacion = (date)=>
 }
 
 
-
-/*
-class Header extends React.Component {
-    render() {
-      console.log(this.props.data)
-      const {
-        title,
-        subtitle,
-        author: { firstName, lastName },
-        date,
-      } = this.props.data
-  
-      return (
-        <header>
-          <div className='header-wrapper'>
-            <h1>{title}</h1>
-            <h2>{subtitle}</h2>
-            <p>
-              {firstName} {lastName}
-            </p>
-            <small>{date}</small>
-          </div>
-        </header>
-      )
-    }
-  }
-
-
-class App extends React.Component {
-
-    state={
-        estacion:'',
-    }
-
-
-    changeEstacion =(est)=>
+const horaDia=(date)=>{
+    let h=''
+    let hora=date.getHours()
+    switch (hora)
     {
-        this.setState({estacion:est})
+        case 21: case 22: case 23: case 24: case 1: case 2: case 3: case 4: case 5: case 6:
+            h="night"
+            break
+        case 7: case 8: case 9: case 10:
+            h="morning"
+            break
+        case 11: case 12: case 13: case 14:
+            h="noon"
+            break
+        case 15: case 16: case 17: case 18: case 19: case 20:
+            h="evening"
+            break
+        default: 
+            h="error"
     }
-
-
-
-    render(){
-
-    const data={
-        title:"Pagina de prueba",
-        subtitle:"Para probar cambiar el fondo dependiendo de la estacion del año",
-        author:{ 
-            firstName: 'Lucia',
-            lastName: 'Sepulveda'
-        },
-        date:new Date()
-    }
-
-    const {estacion}=this.state
-
-    return(
-        <div className="app">
-            <Header data={data}/>
-            <p>Hola</p>
-        </div>
-    )
-
-    }
-
+    return h
 }
-
-*/
-
 
 
 
@@ -166,10 +119,28 @@ const color=(est)=>
 }
 
 
+const colorHora=(hora)=>
+{
+    let hexa=''
+    if (hora==="morning")
+        hexa='#E2FF00'
+    if (hora==="noon")
+        hexa='#32D722'
+    if (hora==="evening")
+        hexa='#22B7D7'
+    if (hora==="night")
+        hexa='#08046F'
+
+    return hexa
+
+}
+
+
 class App extends React.Component {
 
     state = {
-        styles:{backgroundColor:color(estacion(new Date()))},
+        //styles:{backgroundColor:color(estacion(new Date()))},
+        styles:{backgroundColor:colorHora(horaDia(new Date()))}
     }
 
 
