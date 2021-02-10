@@ -5,7 +5,6 @@ import imagen from './images/js_logo.png'
 
 class App extends React.Component {
 
-    /*
     state={
         top:'',
         left:'',
@@ -15,8 +14,6 @@ class App extends React.Component {
             transform:`translate:(0px,0px)`
         }
     }
-    */
-
 
     handleMouseEnter = (e) =>
     {
@@ -41,7 +38,7 @@ class App extends React.Component {
 
     return(
         <div className="container">
-            <img src={imagen} alt="logo js" onMouseEnter={this.handleMouseEnter} style={this.state.style}/>
+            <img src={imagen} alt="logo js" onMouseEnter={this.handleMouseEnter} onMouseOver={this.handleMouseOver} style={this.state.style}/>
         </div>
     )
 
@@ -50,24 +47,5 @@ class App extends React.Component {
 }
 
 
-const Funcion=()=>
-{
-    const [{top,left,style},setStyle]=React.useState('','','transform:translate(0px,0px)')
-    console.log({style})
-    /*
-    const cambiar=()=>
-    {
-        setStyle({top:'100px',left:'500px',style:`transform:translate(${top},${left})`})
-    }
-*/
-    return(
-        <div>
-            <img src={imagen} onMouseEnter={()=>setStyle({top:'100px',left:'500px',style:`transform:translate(${top},${left})`})} style={{style}}/>
-        </div>
-    )
 
-}
-
-
-
-ReactDOM.render(<Funcion/>, document.getElementById("root"))
+ReactDOM.render(<App/>, document.getElementById("root"))
