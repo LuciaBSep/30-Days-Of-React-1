@@ -1,0 +1,42 @@
+.container {
+
+    width:100%;
+    margin:auto;
+
+
+
+ul{
+    display:grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap:10px;
+    list-style-type: none;
+    //grid-template-columns: auto auto auto auto auto auto;
+}
+
+li{
+    /*
+    background-color:white;
+    width:100%;
+    padding: 4%;
+    border: 2px solid black;
+    margin: 10px auto;
+    width:100%;
+    display:inline;
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.25);*/
+}
+
+}
+
+
+@media only screen and (max-width:600px)
+{
+    .container{
+    ul{
+        grid-template-columns: auto auto;
+    }
+
+
+}
+}
+
+
